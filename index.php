@@ -17,7 +17,7 @@ $curl = curl_init();
 curl_setopt($curl, CURLOPT_POST, 1);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $payload);
 curl_setopt($curl, CURLOPT_URL,
-'http://misenvios.com.ar/servicios/api/Tokens');
+'https://misenvios.com.ar/servicios/api/Tokens');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($curl, CURLOPT_HTTPHEADER, array(
  'Content-Type: application/json',
@@ -38,7 +38,7 @@ echo "access-token : " . $access_token;
 
 <form action="#" method="POST">
 <script
- src="http://misenvios.com.ar/app/api/api.min.js"
+ src="https://misenvios.com.ar/app/api/api.min.js"
  data-publictoken="Ff1X1AgNgmQZsl4n9SdBoof7SRXrwA20xGXMMQDPioHXLVUPJX"
  data-transaction-id="10000" 
 ></script>
