@@ -39,8 +39,8 @@ echo "access-token : " . $access_token;
 <form action="#" method="POST">
 <script
  src="https://misenvios.com.ar/app/api/api.min.js"
- data-publictoken="Ff1X1AgNgmQZsl4n9SdBoof7SRXrwA20xGXMMQDPioHXLVUPJX"
- data-transaction-id="38219038129032" 
+ data-public-token="Ff1X1AgNgmQZsl4n9SdBoof7SRXrwA20xGXMMQDPioHXLVUPJX"
+ data-transaction-id="1" 
 ></script>
  </form>
 
