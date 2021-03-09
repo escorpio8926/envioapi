@@ -25,7 +25,7 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 );
 $curl_res = curl_exec($curl);
 
-
+ echo "<script>console.log('" .$curl_res. "');</script>";
 
 curl_close($curl);
 if( $curl_res ){
@@ -40,7 +40,7 @@ echo "access-token : " . $access_token;
 <script
  src="https://misenvios.com.ar/app/api/api.min.js"
  data-publictoken="Ff1X1AgNgmQZsl4n9SdBoof7SRXrwA20xGXMMQDPioHXLVUPJX"
- data-transaction-id="10000" 
+ data-transaction-id="38219038129032" 
 ></script>
  </form>
 
