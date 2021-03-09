@@ -6,13 +6,22 @@
 	<title>Document</title>
 </head>
 <body>
-	<form action="#" method="POST">
- <script
- src="https://misenvios.com.ar/api/api.min.js"
- data-publictoken="4A845D700D234FC8B1FF752DCFE5350482C76B6EC5BE478296"
+
+
+<form action="#" method="POST">
+<script
+ src="http://misenvios.com.ar/app/api/api.min.js"
+ data-publictoken="Ff1X1AgNgmQZsl4n9SdBoof7SRXrwA20xGXMMQDPioHXLVUPJX"
  data-transaction-id="10000" 
- >
- </script>
+></script>
+ </form>
+
+</body>
+
+
+
+
+
 
 </body>
 </html>
