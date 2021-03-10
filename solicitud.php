@@ -19,7 +19,7 @@ $paramsolicitud = array(
  ),
 'destino' => array(
  'calle' => 'coronel zelaya',
- 'altura' => 300,
+ 'altura' => 530 ,
  'esquina' => '',
  'esquina2' => '',
  'barrio' => 'floresta',
@@ -51,7 +51,6 @@ $paramsolicitud = array(
  )
 );
 $token=CURL("POST","https://misenvios.com.ar/servicios/api/Tokens",$payload);
-echo $token;
 $payload = json_encode($paramsolicitud );
 $solicitudID = null;
 $codigoSeguimiento = null;
@@ -81,6 +80,7 @@ if( isset($res["isError"]) && !$res["isError"]){
 $res["result"]["codigoSeguimiento"];
  $fecha = $res["result"]["fecha"];
 }}
+echo "solicitudID : " . $token."<br>";
 echo "solicitudID : " . $solicitudID."<br>";
 echo "codigoSeguimiento : " . $codigoSeguimiento."<br>";
 echo "fecha : " . $fecha;
