@@ -80,7 +80,7 @@ if( isset($res["isError"]) && !$res["isError"]){
 $res["result"]["codigoSeguimiento"];
  $fecha = $res["result"]["fecha"];
 }}
-echo "solicitudID : " . $token."<br>";
+echo "Token de seguridad: " . $token."<br>";
 echo "solicitudID : " . $solicitudID."<br>";
 echo "codigoSeguimiento : " . $codigoSeguimiento."<br>";
 echo "fecha : " . $fecha;
