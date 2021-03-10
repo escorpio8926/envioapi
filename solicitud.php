@@ -2,40 +2,40 @@
 include 'curl.php';
 $paramsolicitud = array(
 'identificadorExterno' => 'PP00001',
-'locationID' => '' ,
+'locationID' => 139,
 'origen' => array(
- 'calle' => 'coronel zelaya',
- 'altura' => 221,
- 'esquina' => '',
+ 'calle' => 'Cerrito',
+ 'altura' => 348,
+ 'esquina' => 'Sarmiento',
  'esquina2' => '',
  'barrio' => '',
- 'localidad' => 'san miguel de tucuman',
+ 'localidad' => 'CABA',
  'partido' => '',
- 'provincia' => 'tucuman',
- 'codigoPostal' => '4000',
+ 'provincia' => 'CABA',
+ 'codigoPostal' => '1104',
  'observacion' => '',
- 'piso' => '',
- 'depto' => ''
+ 'piso' => '1',
+ 'depto' => 'B'
  ),
 'destino' => array(
- 'calle' => 'rivadavia',
- 'altura' => 1050,
- 'esquina' => '',
+ 'calle' => 'Paez',
+ 'altura' => 2591,
+ 'esquina' => 'Bolivia',
  'esquina2' => '',
- 'barrio' => '',
- 'localidad' => 'san miguel de tucuman',
+ 'barrio' => 'Flores',
+ 'localidad' => 'CABA',
  'partido' => '',
- 'provincia' => 'tucuman',
- 'codigoPostal' => '4000',
+ 'provincia' => 'CABA',
+ 'codigoPostal' => '1407',
  'observacion' => '',
  'piso' => '1',
  'depto' => '1'
  ),
 'destinatario' => array(
- 'nombre' => 'prueba',
- 'email' => 'escorpio8924@gmail.com.ar',
+ 'nombre' => 'Emmanuel Monteros',
+ 'email' => 'escorpio8924@gmail.com',
  'phone' => '3815600094',
- 'dni' => '38050294',
+ 'dni' => '34133550',
  'comentario' => ''
  ),
 'productos' => array(
@@ -49,6 +49,7 @@ $paramsolicitud = array(
  'peso' => 15
  )
  )
+
 );
 $token=CURL("POST","https://misenvios.com.ar/servicios/api/Tokens",$payload);
 $payload = json_encode($paramsolicitud );
