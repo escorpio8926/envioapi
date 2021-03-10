@@ -1,7 +1,7 @@
 <?php
 include 'curl.php';
 $paramsolicitud = array(
-'identificadorExterno' => 'PP00010',
+'identificadorExterno' => 'PZ00F010',
 'locationID' => 2122,
 'origen' => array(
  'calle' => 'combate de las piedras',
@@ -18,15 +18,15 @@ $paramsolicitud = array(
  'depto' => ''
  ),
 'destino' => array(
- 'calle' => 'laprida francisco narciso',
- 'altura' => 235 ,
+ 'calle' => 'LAPRIDA FRANCISCO NARCISO',
+ 'altura' => 220 ,
  'esquina' => '',
  'esquina2' => '',
  'barrio' => '',
- 'localidad' => 'san miguel de tucuman',
+ 'localidad' => 'San Miguel de Tucumán',
  'partido' => '',
- 'provincia' => 'tucuman',
- 'codigoPostal' => '4000',
+ 'provincia' => 'Tucumán',
+ 'codigoPostal' => '',
  'observacion' => '',
  'piso' => '',
  'depto' => ''
@@ -68,12 +68,10 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, array(
  "Authorization: Bearer ".$token)
 );
 $curl_res = curl_exec($curl);
-
- echo "<script>console.log('" .$curl_res. "');</script>";
+echo "<script>console.log('" .$curl_res. "');</script>";
 curl_close($curl);
 if( $curl_res ){
  $res = json_decode($curl_res, true);
- echo "<script>console.log('" .$curl_res. "');</script>";
 if( isset($res["isError"]) && !$res["isError"]){
  $solicitudID = $res["result"]["solicitudID"];
  $codigoSeguimiento = 
