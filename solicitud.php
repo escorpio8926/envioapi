@@ -1,32 +1,32 @@
 <?php
 include 'curl.php';
 $paramsolicitud = array(
-'identificadorExterno' => 'PP00001',
-'locationID' => 139,
+'identificadorExterno' => 'PP00010',
+'locationID' => 2122,
 'origen' => array(
- 'calle' => 'Cerrito',
- 'altura' => 348,
- 'esquina' => 'Sarmiento',
+ 'calle' => '',
+ 'altura' => ,
+ 'esquina' => '',
  'esquina2' => '',
  'barrio' => '',
- 'localidad' => 'CABA',
+ 'localidad' => '',
  'partido' => '',
- 'provincia' => 'CABA',
- 'codigoPostal' => '1104',
+ 'provincia' => '',
+ 'codigoPostal' => '',
  'observacion' => '',
- 'piso' => '1',
- 'depto' => 'B'
+ 'piso' => '',
+ 'depto' => ''
  ),
 'destino' => array(
- 'calle' => 'Paez',
- 'altura' => 2591,
- 'esquina' => 'Bolivia',
+ 'calle' => 'coronel zelaya',
+ 'altura' => 300,
+ 'esquina' => '',
  'esquina2' => '',
- 'barrio' => 'Flores',
- 'localidad' => 'CABA',
+ 'barrio' => 'Floresta',
+ 'localidad' => 'san miguel de tucuman',
  'partido' => '',
- 'provincia' => 'CABA',
- 'codigoPostal' => '1407',
+ 'provincia' => 'tucuman',
+ 'codigoPostal' => '400',
  'observacion' => '',
  'piso' => '1',
  'depto' => '1'
@@ -36,7 +36,7 @@ $paramsolicitud = array(
  'email' => 'escorpio8924@gmail.com',
  'phone' => '3815600094',
  'dni' => '34133550',
- 'comentario' => ''
+ 'comentario' => 'test de envio'
  ),
 'productos' => array(
  array(
@@ -49,9 +49,9 @@ $paramsolicitud = array(
  'peso' => 15
  )
  )
-
 );
 $token=CURL("POST","https://misenvios.com.ar/servicios/api/Tokens",$payload);
+echo $token;
 $payload = json_encode($paramsolicitud );
 $solicitudID = null;
 $codigoSeguimiento = null;
@@ -69,11 +69,12 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, array(
  "Authorization: Bearer ".$token)
 );
 $curl_res = curl_exec($curl);
+
  echo "<script>console.log('" .$curl_res. "');</script>";
 curl_close($curl);
 if( $curl_res ){
  $res = json_decode($curl_res, true);
-
+ echo "<script>console.log('" .$curl_res. "');</script>";
 if( isset($res["isError"]) && !$res["isError"]){
  $solicitudID = $res["result"]["solicitudID"];
  $codigoSeguimiento = 
