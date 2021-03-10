@@ -32,6 +32,6 @@ $api_keys = array(
 
 $payload = json_encode($api_keys);
 $token=CURL("POST","https://misenvios.com.ar/servicios/api/Tokens",$payload);
-echo $token;
+
 
  ?>

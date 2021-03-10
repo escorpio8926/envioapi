@@ -1,41 +1,41 @@
 <?php
 include 'curl.php';
 $paramsolicitud = array(
-'identificadorExterno' => 'AAA0003',
-'locationID' => 139,
+'identificadorExterno' => 'PP00001',
+'locationID' => '' ,
 'origen' => array(
- 'calle' => 'Cerrito',
- 'altura' => 348,
- 'esquina' => 'Sarmiento',
+ 'calle' => 'coronel zelaya',
+ 'altura' => 221,
+ 'esquina' => '',
  'esquina2' => '',
  'barrio' => '',
- 'localidad' => 'CABA',
+ 'localidad' => 'san miguel de tucuman',
  'partido' => '',
- 'provincia' => 'CABA',
- 'codigoPostal' => '1104',
+ 'provincia' => 'tucuman',
+ 'codigoPostal' => '4000',
  'observacion' => '',
- 'piso' => '1',
- 'depto' => 'B'
+ 'piso' => '',
+ 'depto' => ''
  ),
 'destino' => array(
- 'calle' => 'Paez',
- 'altura' => 2591,
- 'esquina' => 'Bolivia',
+ 'calle' => 'rivadavia',
+ 'altura' => 1050,
+ 'esquina' => '',
  'esquina2' => '',
- 'barrio' => 'Flores',
- 'localidad' => 'CABA',
+ 'barrio' => '',
+ 'localidad' => 'san miguel de tucuman',
  'partido' => '',
- 'provincia' => 'CABA',
- 'codigoPostal' => '1407',
+ 'provincia' => 'tucuman',
+ 'codigoPostal' => '4000',
  'observacion' => '',
  'piso' => '1',
  'depto' => '1'
  ),
 'destinatario' => array(
- 'nombre' => 'Juan Perez',
- 'email' => 'argentina@ittl.com.ar',
- 'phone' => '1152191584',
- 'dni' => '222123456',
+ 'nombre' => 'prueba',
+ 'email' => 'escorpio8924@gmail.com.ar',
+ 'phone' => '3815600094',
+ 'dni' => '38050294',
  'comentario' => ''
  ),
 'productos' => array(
@@ -59,7 +59,7 @@ $curl = curl_init();
 curl_setopt($curl, CURLOPT_POST, 1);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $payload);
 curl_setopt($curl, CURLOPT_URL,
-'https://localhost:44321/api/Solicitud');
+"https://misenvios.com.ar/servicios/api/Solicitud");
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
  
 curl_setopt($curl, CURLOPT_HTTPHEADER, array(
@@ -67,13 +67,12 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, array(
  'Content-Length: ' . strlen($payload),
  "Authorization: Bearer ".$token)
 );
-echo $token;
-exit;
 $curl_res = curl_exec($curl);
+ echo "<script>console.log('" .$curl_res. "');</script>";
 curl_close($curl);
 if( $curl_res ){
  $res = json_decode($curl_res, true);
- 
+
 if( isset($res["isError"]) && !$res["isError"]){
  $solicitudID = $res["result"]["solicitudID"];
  $codigoSeguimiento = 
