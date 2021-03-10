@@ -1,7 +1,7 @@
 <?php
 include 'curl.php';
 $paramsolicitud = array(
-'identificadorExterno' => 'PZ00F010',
+'identificadorExterno' => 'PZ00F021',
 'locationID' => 2122,
 'origen' => array(
  'calle' => 'combate de las piedras',
