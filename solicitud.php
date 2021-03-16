@@ -1,7 +1,7 @@
 <?php
 include 'curl.php';
 $paramsolicitud = array(
-'identificadorExterno' => 'PZ00F021',
+'identificadorExterno' => 'PZ00F029',
 'locationID' => 2122,
 'origen' => array(
  'calle' => 'combate de las piedras',
@@ -18,14 +18,14 @@ $paramsolicitud = array(
  'depto' => ''
  ),
 'destino' => array(
- 'calle' => 'CORONEL ZELAYA',
- 'altura' => 500 ,
+ 'calle' => 'CONSTITUCION',
+ 'altura' => 200 ,
  'esquina' => '',
  'esquina2' => '',
  'barrio' => '',
- 'localidad' => 'SAN MIGUEL DE TUCUMAN',
+ 'localidad' => 'san miguel de tucuman',
  'partido' => '',
- 'provincia' => 'TUCUMAN',
+ 'provincia' => 'tucuman',
  'codigoPostal' => '4000',
  'observacion' => '',
  'piso' => '',
