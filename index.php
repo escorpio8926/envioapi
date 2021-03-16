@@ -55,7 +55,7 @@ echo "access-token : " . $access_token;
  data-destino-CodigoPostal="400"
  data-destino-Localidad="Tucumán"
  data-destino-Provincia="San Miguel de Tucumán"
- 
+
  data-productos-Descripcion="Producto 1|Producto 2|Producto 3"
  data-productos-Cantidad="1|2|3"
  data-productos-Alto="1|10|20"
@@ -65,10 +65,10 @@ echo "access-token : " . $access_token;
  data-productos-Tiempo="1|5|15"
 
  
- data-destino-Nombre="Emmanuel Monteros"
- data-destino-DNI="¨34.133.550"
+ data-destino-Nombre="Alvaro Rodriguez"
+ data-destino-DNI="¨33050470"
  data-destino-phone="3815600094" 
- data-destino-email="escorpio8924@gmail.com"
+ data-destino-email="sistemas@correoflash.com"
  >
 
 ></script>
