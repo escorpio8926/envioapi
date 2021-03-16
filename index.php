@@ -39,9 +39,38 @@ echo "access-token : " . $access_token;
 <form action="#" method="POST">
 <script
  src="https://misenvios.com.ar/app/api/api.min.js"
+ 
  data-public-token="Ff1X1AgNgmQZsl4n9SdBoof7SRXrwA20xGXMMQDPioHXLVUPJX"
+ 
  data-transaction-id="312021232302" 
+ 
  data-origen-locationID="2122"
+
+ data-country="AR"
+
+ data-destino-Calle="AZCUENAGA"
+ data-destino-Altura="2266"
+ data-destino-Esquina1="UNAMUNO MIGUEL DE"
+ data-destino-Esquina2="COVIELLO ALFREDO"
+ data-destino-CodigoPostal="400"
+ data-destino-Localidad="Tucumán"
+ data-destino-Provincia="San Miguel de Tucumán"
+ 
+ data-productos-Descripcion="Producto 1|Producto 2|Producto 3"
+ data-productos-Cantidad="1|2|3"
+ data-productos-Alto="1|10|20"
+ data-productos-Ancho="21|20|30" 
+ data-productos-Profundidad="3|30|40"
+ data-productos-Peso="2|4|6"
+ data-productos-Tiempo="1|5|15"
+
+ 
+ data-destino-Nombre="Emmanuel Monteros"
+ data-destino-DNI="¨34.133.550"
+ data-destino-phone="3815600094" 
+ data-destino-email="escorpio8924@gmail.com"
+ >
+
 ></script>
  </form>
 
