@@ -33,11 +33,10 @@ return $access_token;
 //funciond de solicitud de la api mis envios
 function solicitud(){
 
-$falta=0;
 //solo el cliente 625
 $cliente_id          = 625;  //si para corroborar el id
 //identificador de mis envios
-$barcode_externo     = 'test00001';// sera el identificador - listo
+$barcode_externo     = 'test00004';// sera el identificador - listo
 
 //datos del destino
 $domicilio           = 'combate de san lorenzo 2660';// en produccion - listo
@@ -56,7 +55,7 @@ For($i=1;$i<=$n;$i++)
     
 }
 
-$numero=strrev($numero);
+$numero=(int)(strrev($numero));
 $calle=strrev($calle);
 
 
@@ -67,7 +66,7 @@ $localidad           = 'san miguel de tucumán';//necesario
 $destinatario        = 'Franco Mendez';
 
 //producto
-$bulto               = '1'; // = a cantidadades
+$bulto               = 1; // = a cantidadades
 $dimensiones         = '5X4X20';
 
 $alto='';
@@ -86,11 +85,14 @@ For($i=1;$i<=$n;$i++)
     
 }
 
-$alto=$dimensiones[0];
-$ancho=$dimensiones[1];
-$profundidad=$dimensiones[2];
+$alto=(int)$dimensiones[0];
+$ancho=(int)$dimensiones[1];
+$profundidad=(int)$dimensiones[2];
 
-$peso                = '20';
+
+
+
+$peso                = 20;
 
 $paramsolicitud = array(
 'identificadorExterno' => $barcode_externo ,
@@ -126,7 +128,7 @@ $paramsolicitud = array(
 'destinatario' => array(
  'nombre' => $destinatario ,
  'email' => 'sistemas@correoflash.com',
- 'phone' => '',
+ 'phone' => '3815600094',
  'dni' => '',
  'comentario' => ''
  ),
@@ -137,13 +139,12 @@ $paramsolicitud = array(
  'alto' => $alto,
  'ancho' => $ancho,
  'profundidad' => $profundidad,
- 'tiempo' => '',
+ 'tiempo' =>1 ,
  'peso' => $peso
  )
  )
 );
 $token=token();
-echo "<script>console.log('" .$token. "');</script>";
 $payload = json_encode($paramsolicitud);
 $solicitudID = null;
 $codigoSeguimiento = null;
@@ -160,8 +161,9 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, array(
  "Authorization: Bearer ".$token)
 );
 $curl_res = curl_exec($curl);
-echo "<script>console.log('" .$curl_res. "');</script>";
+
 curl_close($curl);
+
 if( $curl_res ){
  $res = json_decode($curl_res, true);
 if( isset($res["isError"]) && !$res["isError"]){
@@ -170,10 +172,11 @@ if( isset($res["isError"]) && !$res["isError"]){
 $res["result"]["codigoSeguimiento"];
  $fecha = $res["result"]["fecha"];
 }}
-echo "Token de seguridad: " . $token."<br>";
-echo "solicitudID : " . $solicitudID."<br>";
-echo "codigoSeguimiento : " . $codigoSeguimiento."<br>";
-echo "fecha : " . $fecha;
+echo "<script>console.log('" .$curl_res. "');</script>";
+echo "<script>console.log('" .'Token Verficación: '.$token. "');</script>";
+echo "<script>console.log('" .'SolicitudID: '.$solicitudID. "');</script>";
+echo "<script>console.log('" .'Codigo Seguimiento: '.$codigoSeguimiento. "');</script>";
+echo "<script>console.log('" .'Fecha: '.$fecha. "');</script>";
 }
 
 solicitud();

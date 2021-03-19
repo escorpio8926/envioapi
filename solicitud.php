@@ -52,6 +52,8 @@ $paramsolicitud = array(
 );
 $token=CURL("POST","https://misenvios.com.ar/servicios/api/Tokens",$payload);
 $payload = json_encode($paramsolicitud );
+echo "<script>console.log('" .$payload. "');</script>";
+exit;
 $solicitudID = null;
 $codigoSeguimiento = null;
 $fecha = null;
