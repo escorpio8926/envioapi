@@ -7,7 +7,7 @@ $estado = null;
 $fecha = null;
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL,
-'https://misenvios.com.ar/servicios/api/Solicitud/Seguimientos/'
+'https://misenvios.com.ar/servicios/api/Solicitud/Seguimiento/'
 .$paramsolicitud);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
