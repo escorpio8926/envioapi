@@ -8,9 +8,8 @@
 <body>
 <form action="#" method="POST">
 <script src="https://misenvios.com.ar/app/api/api.min.js"
- data-origen-locationID="2021"
  data-public-token="ta8lmowoeUpZm5RASJPGfJHmXsBhouHIfCMbf0gPJ2wYDky9i0"
-  data-transaction-id="312021232" 
+ data-transaction-id="3018" 
 
  ></script>
  </form>
